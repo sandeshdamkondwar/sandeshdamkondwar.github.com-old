@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <title> You stepped into wrong place</title>
+    <style>
+      html, body, #wrapper {
+        height:100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        background-color: #DBEDF9;
+        font-family: 'Open Sans', sans-serif;
+      }
+      #wrapper td {
+        vertical-align: middle;
+        text-align: center;
+      }
+      .error-message {
+        line-height: 2em;
+        height: 11em;
+      }
+      .heading {
+        font-size: 4em;
+      }
+      .redirect-message {
+        font-size: 1.5em;
+      }
+    </style>
+    <script type="text/javascript">
+      function delayer() {
+        window.location = "http://sandeshdamkondwar.github.com";
+      }
+    </script>
+  </head>
+  <body onLoad="setTimeout('delayer()', 5000)">
+    <table id="wrapper">
+      <tr class="error-message">
+        <td>
+          <h4 class="heading">Ohh damm, You got 404!!!</h4>
+          <h4 class="redirect-message">You are getting redirected to Home Page...</h4>
+        </td>
+      </tr>
+      <tr>
+        <td><img src="images/404.jpg" alt="You stepped into wrong place." /></td>
+      </tr>
+   </table>
+  </body>
+</html>
