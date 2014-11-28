@@ -16,6 +16,9 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Pinterest.com verification -->
+  <meta name="p:domain_verify" content="7a8350d11db6de6765b30bb5c5b3335a"/>
+
   {% capture canonical %}{{ site.url }}{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{{ page.url | remove:'index.html' | strip_slash }}{% endif %}{% endcapture %}
   <link rel="canonical" href="{{ canonical }}">
   <link href="{{ root_url }}/favicon.png" rel="icon">
