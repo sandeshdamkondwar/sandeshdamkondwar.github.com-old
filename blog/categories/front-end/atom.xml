@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Front-end | Sandesh Damkondwar]]></title>
+  <link href="http://sandy.co.in/blog/categories/front-end/atom.xml" rel="self"/>
+  <link href="http://sandy.co.in/"/>
+  <updated>2016-06-22T18:49:03+05:30</updated>
+  <id>http://sandy.co.in/</id>
+  <author>
+    <name><![CDATA[Sandesh Damkondwar]]></name>
+    <email><![CDATA[sandeshdamkondwar@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Box-sizing: Border-box]]></title>
+    <link href="http://sandy.co.in/blog/2013/09/05/box-sizing-border-box/"/>
+    <updated>2013-09-05T02:14:00+05:30</updated>
+    <id>http://sandy.co.in/blog/2013/09/05/box-sizing-border-box</id>
+    <content type="html"><![CDATA[<p>One of my least favorite parts about layout with CSS is the relationship of width and padding. You&#8217;re busy defining widths to match your grid or general column proportions, then down the line you start to add in text, which necessitates defining padding for those boxes. And &#8216;lo and behold, you now are subtracting pixels from your original width so the box doesn&#8217;t expand.</p>
+
+
+<p>Ugh. If I say the width is 200px, gosh darn it, it&#8217;s gonna be a 200px wide box even if I have 20px of padding. So as you know, this is NOT how the box model has worked for the past ten years. Wikipedia has a great <a href="http://en.wikipedia.org/wiki/Internet_Explorer_box_model_bug#Background">history of this box model</a>. <ins><a href="http://www.jefftk.com/news/2012-02-18.html">Jeff Kaufman also dove into the history</a></ins></p>
+
+
+<p><i>Anyway</i>, I have a recommendation for your CSS going forward:</p>
+
+
+<p><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="c">/<em> apply a natural box layout model to all elements </em>/</span>
+</span><span class='line'><span class="o"><em>,</span> <span class="o"></em></span><span class="nd">:before</span><span class="o">,</span> <span class="o">*</span><span class="nd">:after</span> <span class="p">{</span>
+</span><span class='line'>  <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="n">box</span><span class="o">-</span><span class="n">sizing</span><span class="o">:</span> <span class="k">border</span><span class="o">-</span><span class="n">box</span><span class="p">;</span> <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">box</span><span class="o">-</span><span class="n">sizing</span><span class="o">:</span> <span class="k">border</span><span class="o">-</span><span class="n">box</span><span class="p">;</span> <span class="n">box</span><span class="o">-</span><span class="n">sizing</span><span class="o">:</span> <span class="k">border</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+</span><span class='line'> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p>This gives you the box model you want. Applies it to all elements. Turns out many browsers already <a href="http://paulirish.com/wp-content/uploads/2011/gplus-boxsizing.html">use border-box for a lot of form elements</a> (which is why inputs and textareas look diff at width:100%;) But applying this to all elements is safe and wise.</p>
+
+]]></content>
+  </entry>
+  
+</feed>
